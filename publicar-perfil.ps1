@@ -57,6 +57,8 @@ if (-not (Test-Path (Join-Path $PSScriptRoot ".git"))) {
   Write-Host "        Crie o repositorio VAZIO no GitHub antes do primeiro push:" -ForegroundColor DarkGray
   Write-Host "        https://github.com/new  ->  nome: ShendonC  ->  Public" -ForegroundColor DarkGray
   Write-Host "        Sem README, sem .gitignore, sem licenca — senao o push e recusado." -ForegroundColor DarkGray
+  Write-Host ""
+  Read-Host "        Enter DEPOIS de criar o repositorio no GitHub" | Out-Null
 }
 
 if (-not (git remote)) {
@@ -100,9 +102,15 @@ if ($LASTEXITCODE -eq 0) {
   Write-Host "        que so da para verificar depois de publicado." -ForegroundColor DarkGray
 } else {
   Erro "o push falhou (a mensagem do git esta acima)."
-  Write-Host "        'rejected' / 'fetch first' costuma ser repositorio criado" -ForegroundColor DarkGray
-  Write-Host "        com README no GitHub. Ou apague e recrie vazio, ou rode:" -ForegroundColor DarkGray
-  Write-Host "        git pull --rebase origin main" -ForegroundColor DarkGray
+  Write-Host ""
+  Write-Host "        'Repository not found' -> o repositorio ainda nao existe no" -ForegroundColor DarkGray
+  Write-Host "        GitHub, OU voce nao esta autenticado. O GitHub responde 404" -ForegroundColor DarkGray
+  Write-Host "        nos dois casos, de proposito, para nao revelar o que existe." -ForegroundColor DarkGray
+  Write-Host "        Crie em https://github.com/new -> ShendonC -> Public -> vazio," -ForegroundColor DarkGray
+  Write-Host "        e rode este script de novo." -ForegroundColor DarkGray
+  Write-Host ""
+  Write-Host "        'rejected' / 'fetch first' -> foi criado COM README. Apague e" -ForegroundColor DarkGray
+  Write-Host "        recrie vazio, ou rode: git pull --rebase origin main" -ForegroundColor DarkGray
 }
 
 Fechar 0
