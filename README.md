@@ -1,10 +1,12 @@
-<img src="banner.svg" alt="ShendonC — audiovisual producer, computer science, generative-AI pipelines" width="100%">
+﻿<img src="banner.svg" alt="ShendonC — audiovisual producer, computer science, generative-AI pipelines" width="100%">
 
-I produce and edit video at **Band (Grupo Bandeirantes)**, where I built a
-digital-novela workflow that runs end to end on generative AI — LLM-written
-scripts, generated avatars and environments, synthesized voice. I'm studying
-**Computer Science at FIAP** and moving the same instinct into software: if a
-step is boring and repeats three hundred times, it should be a script.
+I work on the post-training and quality alignment of frontier generative video
+AI models at **micro1 (US, remote)**, and produce/edit digital video at **Band
+(Grupo Bandeirantes)**, where I built a digital-novela workflow that runs end to
+end on generative AI — LLM-written scripts, generated avatars and environments,
+synthesized voice. I'm studying **Computer Science at FIAP** and moving the same
+instinct into software: if a step is boring and repeats three hundred times, it
+should be a script.
 
 I started in hardware, not in an editor. That order still shows in how I work.
 
@@ -35,6 +37,12 @@ CustomTkinter, Gemini. Built with Marcelo Martins for FIAP's Global Solution
 <!-- Se quiser creditar o @ do GitHub do Marcelo, troque o nome por [@usuario](url).
      Não coloquei porque não sei o usuário dele e não vou chutar. -->
 
+**End-to-end media & channel automation** — programmatic video pipelines in
+Python and FFmpeg (automated scripting, generative assets, Whisper word-level
+caption alignment, `-14 LUFS` broadcast audio mastering, and 60fps HTML5/GSAP
+motion rendering), powering fully autonomous digital channels that crossed
+500k+ organic views in their first month.
+
 **Local AI orchestration** — a setup that pairs a planning model with a local
 executor running on my own hardware, so the expensive model designs and the
 cheap one does the typing.
@@ -59,10 +67,10 @@ software as the only place a problem can live.
 ### Stack
 
 ```
-Python          main language — automation, ML, tooling
+Python / FFmpeg main language — media pipelines, automation, ML, tooling
 PennyLane       hybrid quantum-classical circuits
 Qiskit / QASM   learning
-JavaScript      vanilla, no-build front ends
+JavaScript      vanilla, no-build front ends & 60fps GSAP motion
 Embedded        firmware, soldering, sensor work
 Premiere · After Effects · DaVinci Resolve
 ```
